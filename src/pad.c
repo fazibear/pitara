@@ -26,9 +26,16 @@ void pad_put_dot(State *state, int x, int y) {
 }
 
 void pad_handle_input(State *state) {
+  int x, y;
+  if (GetGestureDetected() == GESTURE_HOLD) {
+    x = GetTouchX();
+    y = GetTouchY();
+  }
   if (IsMouseButtonDown(MOUSE_LEFT_BUTTON)) {
-    int x = GetMouseX();
-    int y = GetMouseY();
+    x = GetMouseX();
+    y = GetMouseY();
+  }
+  if (x > 0 || y > 0) {
     int pad_x = (x - 11) / (PAD_WIDTH + 1);
     int pad_y = (y - 6) / (PAD_HEIGHT + 1);
     if (pad_x >= 0 && pad_x < PAD_NUM_X && pad_y >= 0 && pad_y < PAD_NUM_Y) {
