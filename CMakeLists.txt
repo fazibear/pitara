@@ -31,3 +31,9 @@ target_link_libraries(
   pitara
   raylib
 )
+
+add_custom_target(run
+    COMMAND pitara
+    DEPENDS pitara
+    WORKING_DIRECTORY ${CMAKE_PROJECT_DIR}
+)
