@@ -10,4 +10,6 @@
 /CTestTestfile.cmake
 /_deps
 /build
-/*.cmake
+*.cmake
+/compile_commands.json
+/.cache

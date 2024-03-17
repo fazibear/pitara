@@ -3,10 +3,13 @@ project(pitara)
 
 include(FetchContent)
 
+set(BIN_NAME pitara)
 set(CMAKE_BUILD_TYPE Release)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build)
+
 set_property(GLOBAL PROPERTY C_STANDARD 11)
 
 if (CMAKE_HOST_SYSTEM_PROCESSOR STREQUAL "armv7l")
@@ -24,16 +27,20 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(
   raylib
 )
+include_directories(
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
 
-add_executable(pitara src/main.c)
+FILE(GLOB SOURCES src/*.c)
+add_executable(pitara ${SOURCES})
 
 target_link_libraries(
-  pitara
+  ${BIN_NAME}
   raylib
 )
 
 add_custom_target(run
-    COMMAND pitara
-    DEPENDS pitara
+    COMMAND ${BIN_NAME}
+    DEPENDS ${BIN_NAME}
     WORKING_DIRECTORY ${CMAKE_PROJECT_DIR}
 )
