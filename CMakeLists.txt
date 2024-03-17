@@ -10,6 +10,8 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build)
 
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+
 set_property(GLOBAL PROPERTY C_STANDARD 11)
 
 if (CMAKE_HOST_SYSTEM_PROCESSOR STREQUAL "armv7l")
@@ -27,12 +29,9 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(
   raylib
 )
-include_directories(
-  ${CMAKE_CURRENT_SOURCE_DIR}/include
-)
 
-FILE(GLOB SOURCES src/*.c)
-add_executable(pitara ${SOURCES})
+FILE(GLOB SOURCE_FILES src/*.c)
+add_executable(pitara ${SOURCE_FILES})
 
 target_link_libraries(
   ${BIN_NAME}

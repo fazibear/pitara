@@ -1,3 +1,6 @@
 #pragma once
 
-void pad_draw(void);
+#include "state.h"
+
+void pad_update(State *);
+void pad_draw(State *);

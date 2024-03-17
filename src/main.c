@@ -1,29 +1,23 @@
 #include "pad.h"
-#include "screen.h"
+#include "state.h"
 
 #include "raylib.h"
 
 int main(void) {
-  const int screenWidth = 800;
-  const int screenHeight = 480;
+  struct State state = {
+      .current_frame = 0,
+      .current_screen = PAD,
+      .pad = {.state = {0}},
+  };
 
-  InitWindow(screenWidth, screenHeight, "πtara");
+  InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "πtara");
 
-  Screen currentScreen = PAD;
+  SetTargetFPS(60);
 
-  int framesCounter = 0; // Useful to count frames
-
-  SetTargetFPS(60); // Set desired framerate (frames-per-second)
-
-  while (!WindowShouldClose()) // Detect window close button or ESC key
-  {
-    switch (currentScreen) {
+  while (!WindowShouldClose()) {
+    switch (state.current_screen) {
     case PAD: {
-      framesCounter++; // Count frames
-
-      if (framesCounter > 120) {
-        currentScreen = PAD;
-      }
+      pad_update(&state);
     } break;
     default:
       break;
@@ -33,17 +27,18 @@ int main(void) {
 
     ClearBackground(RAYWHITE);
 
-    switch (currentScreen) {
+    switch (state.current_screen) {
     case PAD:
-      pad_draw();
+      pad_draw(&state);
       break;
     default:
       break;
     }
 
     EndDrawing();
+    state.current_frame++;
   }
 
-  CloseWindow(); // Close window and OpenGL context
+  CloseWindow();
   return 0;
 }
