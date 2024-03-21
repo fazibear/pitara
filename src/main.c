@@ -1,13 +1,12 @@
+#include "const.h"
 #include "pad.h"
-#include "state.h"
-
 #include "raylib.h"
 
 int main(void) {
   struct State state = {
       .current_frame = 0,
       .current_screen = PAD,
-      .pad = {0},
+      .pad = {{0}},
       .neck = {{0}},
   };
 
