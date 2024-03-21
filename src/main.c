@@ -7,7 +7,8 @@ int main(void) {
   struct State state = {
       .current_frame = 0,
       .current_screen = PAD,
-      .pad = {.state = {0}},
+      .pad = {0},
+      .neck = {{0}},
   };
 
   InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "πtara");
