@@ -26,8 +26,14 @@ FetchContent_Declare(
   GIT_TAG        5.0
 )
 
+FetchContent_Declare(
+  rtmidi
+  GIT_REPOSITORY https://github.com/thestk/rtmidi.git
+  GIT_TAG        6.0.0
+)
+
 FetchContent_MakeAvailable(
-  raylib
+  rtmidi raylib
 )
 
 FILE(GLOB SOURCE_FILES src/*.c)
@@ -36,6 +42,7 @@ add_executable(pitara ${SOURCE_FILES})
 target_link_libraries(
   ${BIN_NAME}
   raylib
+  rtmidi
 )
 
 add_custom_target(run

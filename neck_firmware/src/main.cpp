@@ -7,7 +7,7 @@ int strings_n = 6;
 int strings[6] = {40, 41, 42, 43, 44, 45};
 
 int frets_n = 5;
-int frets[5] = {2, 3, 4, 5, 6};
+int frets[12] = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
 
 void setup() {
   Serial.begin(115200);
@@ -43,7 +43,7 @@ void changed(int string, int fret, int value) {
 void check_string(int string) {
   digitalWrite(strings[string], LOW);
   for (int fret = 0; fret < frets_n; fret++) {
-    int x = digitalRead(frets[fret]);
+    int x = !digitalRead(frets[fret]);
     if (x != neck[string][fret]) {
       changed(string, fret, x);
       neck[string][fret] = x;
