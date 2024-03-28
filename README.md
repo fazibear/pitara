@@ -1,14 +1,17 @@
-#
-
 <p align="center">
-    <picture>
-        <img src="https://github.com/fazibear/pitara/blob/master/images/logo.jpg?raw=true" width="250" height="250" alt="PIX">
-    </picture>
-    <br>
-    <strong>Rpi Digital Guitar</strong>
+<h1>πtara</h1>
+<picture><img src="https://github.com/fazibear/pitara/blob/master/logo.jpg?raw=true" width="250" height="250" alt="PIX"></picture>
+<br>
+<strong>Digital Guitar with Raspberry Pi</strong>
 </p>
 
-# What to use??
+### Parts
+- neck_pio - neck firmware written in c + platformio
+- body_c   - body firmware written in c + cmake
+
+## TODO!
+
+### What to use??
 
 - buildroot
 - raylib
@@ -16,9 +19,7 @@
 - rtmidi
 - cmake
 
----
-
-# Other
+### Other
 
 - lvgl
 - yocto

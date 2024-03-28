@@ -24,7 +24,6 @@ int main(void) {
     }
 
     BeginDrawing();
-
     ClearBackground(RAYWHITE);
 
     switch (state.current_screen) {

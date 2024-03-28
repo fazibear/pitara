@@ -3,6 +3,7 @@ project(pitara)
 
 include(FetchContent)
 
+#set(CMAKE_GENERATOR Ninja)
 set(BIN_NAME pitara)
 set(CMAKE_BUILD_TYPE Release)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
