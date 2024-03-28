@@ -1,8 +1,19 @@
+#
+
+<p align="center">
+    <picture>
+        <img src="https://github.com/fazibear/pitara/blob/master/images/logo.jpg?raw=true" width="250" height="250" alt="PIX">
+    </picture>
+    <br>
+    <strong>Rpi Digital Guitar</strong>
+</p>
+
 # What to use??
 
 - buildroot
 - raylib
 - libts
+- rtmidi
 - cmake
 
 ---
