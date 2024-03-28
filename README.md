@@ -5,10 +5,12 @@
         <img src="https://github.com/fazibear/pitara/blob/master/images/logo.jpg?raw=true" width="250" height="250" alt="PIX">
     </picture>
     <br>
-    <strong>Rpi Digital Guitar</strong>
+    <strong>Digital Guitar with Raspberry Pi</strong>
 </p>
 
-# What to use??
+## TODO!
+
+### What to use??
 
 - buildroot
 - raylib
@@ -16,9 +18,7 @@
 - rtmidi
 - cmake
 
----
-
-# Other
+### Other
 
 - lvgl
 - yocto
