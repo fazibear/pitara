@@ -1,8 +1,10 @@
+#
+
+<h2 align="center">πtara</h2>
 <p align="center">
-<h1>πtara</h1>
-<picture><img src="https://github.com/fazibear/pitara/blob/master/logo.jpg?raw=true" width="250" height="250" alt="PIX"></picture>
-<br>
-<strong>Digital Guitar with Raspberry Pi</strong>
+    <img src="https://github.com/fazibear/pitara/blob/master/logo.jpg?raw=true" width="250" height="250" alt="PIX"/>
+    <br>
+    <strong>Digital Guitar with Raspberry Pi</strong>
 </p>
 
 ### Parts
