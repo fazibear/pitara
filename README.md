@@ -1,6 +1,5 @@
-#
 
-<h2 align="center">πtara</h2>
+<h1 align="center">πtara</h1>
 <p align="center">
     <img src="https://github.com/fazibear/pitara/blob/master/logo.jpg?raw=true" width="250" height="250" alt="PIX"/>
     <br>
