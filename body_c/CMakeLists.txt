@@ -3,7 +3,6 @@ project(pitara)
 
 include(FetchContent)
 
-#set(CMAKE_GENERATOR Ninja)
 set(BIN_NAME pitara)
 set(CMAKE_BUILD_TYPE Release)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -33,9 +32,7 @@ FetchContent_Declare(
   GIT_TAG        6.0.0
 )
 
-FetchContent_MakeAvailable(
-  rtmidi raylib
-)
+FetchContent_MakeAvailable(rtmidi raylib)
 
 FILE(GLOB SOURCE_FILES src/*.c)
 add_executable(pitara ${SOURCE_FILES})

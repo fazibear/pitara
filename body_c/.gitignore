@@ -13,3 +13,5 @@
 *.cmake
 /compile_commands.json
 /.cache
+/.ninja*
+/*.ninja
