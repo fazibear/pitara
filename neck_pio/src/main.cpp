@@ -6,8 +6,9 @@ int current_string = 0;
 int strings_n = 6;
 int strings[6] = {40, 41, 42, 43, 44, 45};
 
-int frets_n = 5;
-int frets[12] = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
+int frets_n = 24;
+int frets[24] = {2,  3,  4,  5,  6,  7,  8,  9,  10, 11, 12, 27,
+                 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25};
 
 void setup() {
   Serial.begin(115200);

@@ -48,3 +48,7 @@ add_custom_target(run
     DEPENDS ${BIN_NAME}
     WORKING_DIRECTORY ${CMAKE_PROJECT_DIR}
 )
+
+add_custom_target(sync
+  COMMAND rsync -aP --filter=':- .gitignore' . rpi-1:~/c-body
+)
